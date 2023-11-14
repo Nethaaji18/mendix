@@ -1,0 +1,17 @@
+version: "2.3"
+
+services:
+    mendixapp:
+        image: nethaaji/demoapp
+        container_name: my-mendix-container
+        environment:
+            ADMIN_PASSWORD: Password1!
+            # MXRUNTIME_DatabaseJdbcUrl: mysql://db:3306/mendix
+            MXRUNTIME_DatabaseType: MySql
+            MXRUNTIME_DatabaseUserName: root
+            MXRUNTIME_DatabasePassword: password
+            MXRUNTIME_DatabaseHost: 54.208.48.212:3306
+            MXRUNTIME_DatabaseName: net
+            # DATABASE_URL: mysql://mendix:mendix@db:3306/mendix
+        ports:
+            - 8080:8080
